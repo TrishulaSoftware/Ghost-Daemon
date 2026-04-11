@@ -1,0 +1,14 @@
+# --- CONFIG.YAML.EXAMPLE ---
+# GHOST DAEMON SOVEREIGN SCHEMA
+# DO NOT COMMIT ACTUAL CREDENTIALS TO GIT.
+
+# Discord Telemetry Target
+discord_webhook: "https://discordapp.com/api/webhooks/YOUR_WEBHOOK_HERE"
+
+# Local Infrastructure Paths
+ngrok_path: "C:\\nGrok\\ngrok.exe" # Windows format example
+ngrok_port: 8000
+
+# Watchdog Behavior
+poll_interval: 60
+max_retries: 5

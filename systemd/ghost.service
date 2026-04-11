@@ -1,0 +1,14 @@
+[Unit]
+Description=Ghost Daemon Sovereign Watchdog
+After=network.target
+
+[Service]
+Type=simple
+User=trishula
+WorkingDirectory=/d/Trishula-Infra/Ghost-Daemon
+ExecStart=/usr/bin/python3 ghost_daemon.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
