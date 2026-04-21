@@ -27,8 +27,8 @@ on:
                                                                                                                                   pip install gitpython
                                                                                                                                             if [ -f Security-Janitor/requirements.txt ]; then pip install -r Security-Janitor/requirements.txt; fi
                                                                                                                                             
-                                                                                                                                                  - name: CRUCIBLE: Prompt Injection Simulation
+                                                                                                                                                  - name: "CRUCIBLE: Prompt Injection Simulation"
                                                                                                                                                           run: |
-                                                                                                                                                                    python Security-Janitor/janitor_core.py --target . --mode audit
+                                                                                                                                                                    python Security-Janitor/janitor_core.py --target . --mode audit > audit.log 2>&1
                                                                                                                                                                               if grep -q "TS-005" audit.log; then exit 1; fi
                                                                                                                                                                               
